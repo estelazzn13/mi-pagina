@@ -1,0 +1,502 @@
+/* ==============================
+   CONFIGURACIÓN GENERAL
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top, #ffd9e8, #ffc1d8 45%, #f7a8c4);
+
+    color: #7d3655;
+}
+
+
+/* ==============================
+   CORAZÓN DE FONDO
+   ============================== */
+
+#heart-container {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* ==============================
+   TARJETA
+   ============================== */
+
+.card {
+    position: relative;
+
+    width: min(90%, 650px);
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 245, 249, 0.88);
+
+    border: 2px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 50px rgba(137, 52, 87, 0.18),
+        inset 0 0 30px rgba(255, 255, 255, 0.4);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 2;
+
+    animation: appear 1s ease;
+}
+
+
+/* ==============================
+   TEXTO
+   ============================== */
+
+   @font-face {
+    font-family: "Floraison";
+    src: url("fonts/Floraison des Amours.ttf") format("truetype");
+}
+@font-face {
+    font-family: "KG Perfect Penmanship";
+    src: url("fonts/KGPerfectPenmanship.ttf") format("truetype");
+}
+body {
+    font-family: "KG Perfect Penmanship", cursive;
+}
+
+button {
+    font-family: "KG Perfect Penmanship", cursive;
+}
+
+.birthday-text h1 {
+    font-family: "Floraison", cursive;
+}
+h1 {
+        font-family: "Floraison", cursive;
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    font-size: clamp(2rem, 6vw, 3.2rem);
+
+    color: #d95b8a;
+
+    text-shadow: 0 3px 10px rgba(217, 91, 138, 0.2);
+}
+
+.intro {
+    font-size: 1.25rem;
+
+    margin-bottom: 30px;
+}
+
+.question {
+    font-size: 1.35rem;
+
+    line-height: 1.6;
+
+    margin: 25px auto;
+
+    max-width: 520px;
+
+    color: #71334e;
+}
+
+
+/* ==============================
+   BOTONES
+   ============================== */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+button {
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 999px;
+
+    font-size: 1rem;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+    box-shadow: 0 6px 15px rgba(120, 50, 80, 0.15);
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 9px 20px rgba(120, 50, 80, 0.2);
+}
+
+#yesButton {
+    background: #e982a8;
+
+    color: white;
+}
+
+#yesButton:hover {
+    background: #df6f9a;
+}
+
+#noButton {
+    background: #fff;
+
+    color: #a64f73;
+}
+
+#noButton:hover {
+    background: #ffe8f0;
+}
+
+
+/* ==============================
+   MENSAJES
+   ============================== */
+
+.message {
+    font-size: 1.6rem;
+
+    line-height: 1.5;
+
+    color: #d65c8b;
+
+    animation: messageAppear 0.7s ease;
+}
+
+.small-message {
+    margin-top: 25px;
+
+    font-size: 1rem;
+
+    color: #9a536f;
+}
+
+
+/* ==============================
+   CORAZONES QUE APARECEN AL FINAL
+   ============================== */
+
+.floating-heart {
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    animation: floatHeart 3s ease-out forwards;
+}
+
+
+/* ==============================
+   ANIMACIONES
+   ============================== */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatHeart {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.7);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh) scale(1.4);
+    }
+}
+
+
+/* ==============================
+   MÓVIL
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .card {
+        padding: 35px 22px;
+    }
+
+    .intro {
+        font-size: 1.1rem;
+    }
+
+    .question {
+        font-size: 1.15rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+/* ==========================================
+   BOTÓN DE CUMPLEAÑOS
+   ========================================== */
+
+.birthday-intro {
+    margin-top: 25px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.birthday-button {
+    font-family: "Quicksand", sans-serif;
+    border: none;
+    border-radius: 18px;
+    padding: 12px 24px;
+    background: #f3b6cf;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.birthday-button:hover {
+    transform: scale(1.06);
+}
+
+
+/* ==========================================
+   PANTALLA DE CUMPLEAÑOS
+   ========================================== */
+
+body.birthday-screen {
+    background:
+        radial-gradient(
+            circle at center,
+            #ffffff 0%,
+            #f8fbff 45%,
+            #dbeaff 100%
+        );
+
+    min-height: 100vh;
+}
+
+.birthday-screen #heart-container {
+    display: none;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    font-size: 28px;
+    color: #8db9e8;
+    opacity: 0.75;
+    line-height: 2;
+    word-spacing: 35px;
+}
+
+.birthday-layout {
+    position: relative;
+    z-index: 2;
+
+    width: 90%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+.birthday-image {
+    width: 230px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.birthday-image img {
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: 20px;
+    object-fit: cover;
+
+    box-shadow: 0 10px 35px rgba(80, 130, 190, 0.18);
+}
+
+.birthday-text {
+    width: 430px;
+    text-align: center;
+}
+
+.birthday-text h1 {
+    color: #679bd1;
+    font-size: 38px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.birthday-text p {
+    color: #55718f;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+/* ==========================================
+   BOTÓN DE MÚSICA
+   ========================================== */
+
+#musicButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    z-index: 100;
+
+    border: none;
+    border-radius: 20px;
+
+    padding: 10px 16px;
+
+    background: rgba(255, 255, 255, 0.8);
+    color: #d47fa4;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+#musicButton:hover {
+    transform: scale(1.05);
+}
+.vinyl {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+
+    width: 65px;
+    height: 65px;
+
+    padding: 0 !important;
+    margin: 0;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    background: #222 !important;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.2s;
+}
+
+.vinyl span {
+    color: #f5c7d9;
+    font-size: 20px;
+}
+
+.vinyl:hover {
+    transform: scale(1.08);
+}
+
+.vinyl.playing {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
