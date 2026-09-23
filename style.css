@@ -464,19 +464,14 @@ button:hover {
 
     /* TEXTO */
 
-    .birthday-text {
-
-        width: 100%;
-
-        max-width: 360px;
-
-        text-align: center;
-
-        order: 2;
-
-        margin: 0 auto;
-    }
-
+  .birthday-text {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    order: 2;
+    margin: 0 auto;
+    transform: translateX(15px);
+}
 
     .birthday-text h1 {
 
