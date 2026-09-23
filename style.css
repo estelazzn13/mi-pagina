@@ -688,6 +688,7 @@ body.birthday-screen {
     }
 
     .card {
+        transform: translateY(-20px);
     width: calc(100% - 30px);
     max-width: 390px;
     margin: 0 auto !important;
