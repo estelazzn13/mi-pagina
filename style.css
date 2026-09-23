@@ -280,259 +280,42 @@ button:hover {
 }
 
 
-/* ==============================
-   MÓVIL
-   ============================== */
-
-@media (max-width: 600px) {
-
-    .card {
-        padding: 35px 22px;
-    }
-
-    .intro {
-        font-size: 1.1rem;
-    }
-
-    .question {
-        font-size: 1.15rem;
-    }
-
-    button {
-        width: 100%;
-    }
-}
-/* ==========================================
-   BOTÓN DE CUMPLEAÑOS
-   ========================================== */
-
-.birthday-intro {
-    margin-top: 25px;
-    margin-bottom: 8px;
-    font-size: 18px;
-}
-
-.birthday-button {
-    font-family: "Quicksand", sans-serif;
-    border: none;
-    border-radius: 18px;
-    padding: 12px 24px;
-    background: #f3b6cf;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.birthday-button:hover {
-    transform: scale(1.06);
-}
-
-
-/* ==========================================
-   PANTALLA DE CUMPLEAÑOS
-   ========================================== */
-
-body.birthday-screen {
-    background:
-        radial-gradient(
-            circle at center,
-            #ffffff 0%,
-            #f8fbff 45%,
-            #dbeaff 100%
-        );
-
-    min-height: 100vh;
-}
-
-.birthday-screen #heart-container {
-    display: none;
-}
-
-.stars {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-
-    font-size: 28px;
-    color: #8db9e8;
-    opacity: 0.75;
-    line-height: 2;
-    word-spacing: 35px;
-}
-
-.birthday-layout {
-    position: relative;
-    z-index: 2;
-
-    width: 90%;
-    max-width: 1200px;
-    min-height: 100vh;
-    margin: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 45px;
-}
-
-.birthday-image {
-    width: 230px;
-    height: 300px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.birthday-image img {
-    max-width: 100%;
-    max-height: 100%;
-
-    border-radius: 20px;
-    object-fit: cover;
-
-    box-shadow: 0 10px 35px rgba(80, 130, 190, 0.18);
-}
-
-.birthday-text {
-    width: 430px;
-    text-align: center;
-}
-
-.birthday-text h1 {
-    color: #679bd1;
-    font-size: 38px;
-    line-height: 1.15;
-    margin-bottom: 25px;
-}
-
-.birthday-text p {
-    color: #55718f;
-    font-size: 17px;
-    line-height: 1.6;
-    margin: 15px 0;
-}
-/* ==========================================
-   BOTÓN DE MÚSICA
-   ========================================== */
-
-#musicButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-
-    z-index: 100;
-
-    border: none;
-    border-radius: 20px;
-
-    padding: 10px 16px;
-
-    background: rgba(255, 255, 255, 0.8);
-    color: #d47fa4;
-
-    font-size: 14px;
-
-    cursor: pointer;
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-
-    transition: 0.3s;
-}
-
-#musicButton:hover {
-    transform: scale(1.05);
-}
-.vinyl {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-
-    width: 65px;
-    height: 65px;
-
-    padding: 0 !important;
-    margin: 0;
-
-    border: none !important;
-    border-radius: 50% !important;
-
-    background: #222 !important;
-
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 100;
-
-    box-sizing: border-box;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-
-    transition: transform 0.2s;
-}
-
-.vinyl span {
-    color: #f5c7d9;
-    font-size: 20px;
-}
-
-.vinyl:hover {
-    transform: scale(1.08);
-}
-
-.vinyl.playing {
-    animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
 /* =========================
    VERSIÓN PARA MÓVIL
    ========================= */
 
 @media (max-width: 600px) {
 
-    /* =========================
-       PÁGINA PRINCIPAL
-       ========================= */
-
     body {
         padding: 0;
         margin: 0;
         width: 100%;
         min-height: 100vh;
+
         box-sizing: border-box;
+
         overflow-x: hidden;
+        overflow-y: auto;
 
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
+
+    /* PÁGINA PRINCIPAL */
 
     .card {
         width: calc(100% - 30px);
         max-width: 390px;
 
-        /* Un poquito hacia la derecha */
-        margin-left: 8px !important;
-        margin-right: -8px !important;
+        margin: 20px auto 0 !important;
 
         padding: 30px 18px;
+
         box-sizing: border-box;
+
+        /* 10px a la izquierda y 20px hacia arriba */
+        transform: translate(-10px, -20px);
     }
 
     h1 {
@@ -552,7 +335,6 @@ body.birthday-screen {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         gap: 12px;
     }
 
@@ -562,13 +344,12 @@ body.birthday-screen {
     }
 
 
-    /* =========================
-       DISCO DE MÚSICA
-       ========================= */
+    /* DISCO DE MÚSICA */
 
     .vinyl {
         width: 55px !important;
         height: 55px !important;
+
         top: 15px;
         right: 15px;
     }
@@ -578,20 +359,24 @@ body.birthday-screen {
     }
 
 
-    /* =========================
-       PANTALLA DE CUMPLEAÑOS
-       ========================= */
+    /* PANTALLA DE CUMPLEAÑOS */
 
     body.birthday-screen {
         display: block;
+
         padding: 0;
+
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .birthday-layout {
         width: 100%;
-        min-height: 100vh;
 
-        padding: 80px 20px 40px;
+        min-height: auto;
+
+        padding: 70px 20px 50px;
+
         margin: 0 auto;
 
         box-sizing: border-box;
@@ -604,12 +389,15 @@ body.birthday-screen {
         gap: 25px;
     }
 
+
     /* TEXTO */
 
     .birthday-text {
         width: 100%;
         max-width: 360px;
+
         text-align: center;
+
         order: 2;
     }
 
@@ -626,13 +414,12 @@ body.birthday-screen {
     }
 
 
-    /* =========================
-       IMÁGENES
-       ========================= */
+    /* IMÁGENES */
 
     .birthday-image {
         width: 190px;
         height: auto;
+
         min-height: 0;
 
         display: flex;
@@ -654,78 +441,20 @@ body.birthday-screen {
         object-fit: contain;
     }
 
-    .birthday-image:first-child {
+    .birthday-layout .birthday-image:first-child {
         order: 1;
     }
 
-    .birthday-image:last-child {
+    .birthday-layout .birthday-image:last-child {
         order: 3;
     }
 
 
-    /* =========================
-       ESTRELLAS
-       ========================= */
+    /* ESTRELLAS */
 
     .stars {
         font-size: 20px;
         word-spacing: 10px;
         line-height: 2;
-    }
-}@media (max-width: 600px) {
-
-    body {
-        padding: 15px;
-        margin: 0;
-        width: 100%;
-        min-height: 100vh;
-        box-sizing: border-box;
-        overflow-x: hidden;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .card {
-        transform: translateY(-20px);
-    width: calc(100% - 30px);
-    max-width: 390px;
-    margin: 0 auto !important;
-    transform: translateX(-10px);
-}
-
-    h1 {
-        font-size: 2.2rem;
-        line-height: 1.1;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        width: 100%;
-    }
-
-    .buttons button {
-        width: 90%;
-        max-width: 280px;
-    }
-
-    .vinyl {
-        width: 55px !important;
-        height: 55px !important;
-        top: 15px;
-        right: 15px;
-    }
-
-    .vinyl span {
-        font-size: 18px;
     }
 }
