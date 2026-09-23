@@ -470,7 +470,7 @@ button:hover {
     text-align: center;
     order: 2;
     margin: 0 auto;
-    transform: translateX(15px);
+    transform: translateX(30px);
 }
 
     .birthday-text h1 {
