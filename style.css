@@ -468,9 +468,10 @@ button:hover {
     width: 100%;
     max-width: 360px;
     text-align: center;
-    order: 4;
+    order: 2;
     margin: 0 auto;
     transform: translateY(10px);
+    transform: translateX(10px);
 }
 
     .birthday-text h1 {
