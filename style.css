@@ -500,3 +500,104 @@ body.birthday-screen {
         transform: rotate(360deg);
     }
 }
+/* =========================
+   VERSIÓN PARA MÓVIL
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+        overflow-x: hidden;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 420px;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .buttons button {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    /* Disco de música */
+    .vinyl {
+        width: 55px !important;
+        height: 55px !important;
+        top: 15px;
+        right: 15px;
+    }
+
+    .vinyl span {
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       CUMPLEAÑOS EN MÓVIL
+       ========================= */
+
+    .birthday-layout {
+        width: 100%;
+        min-height: auto;
+        padding: 90px 15px 40px;
+        box-sizing: border-box;
+
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .birthday-image {
+        width: 180px;
+        height: 220px;
+    }
+
+    .birthday-text {
+        width: 100%;
+        max-width: 380px;
+        order: 2;
+    }
+
+    .birthday-text h1 {
+        font-size: 30px;
+        line-height: 1.15;
+    }
+
+    .birthday-text p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .birthday-image:first-child {
+        order: 1;
+    }
+
+    .birthday-image:last-child {
+        order: 3;
+    }
+
+    .stars {
+        font-size: 20px;
+        word-spacing: 15px;
+    }
+
+}
