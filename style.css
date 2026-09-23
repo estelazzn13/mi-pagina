@@ -468,7 +468,7 @@ button:hover {
     width: 100%;
     max-width: 360px;
     text-align: center;
-    order: 2;
+    order: 4;
     margin: 0 auto;
     transform: translateY(10px);
 }
