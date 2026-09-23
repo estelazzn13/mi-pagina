@@ -362,7 +362,7 @@ button:hover {
 .card {
     width: calc(100% - 30px);
     max-width: 390px;
-    margin-left: 10px !important;
+    margin-left: 20px !important;
     margin-right: 0 !important;
     padding: 30px 18px;
     box-sizing: border-box;
