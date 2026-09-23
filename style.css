@@ -471,7 +471,7 @@ button:hover {
     order: 2;
     margin: 0 auto;
     transform: translateY(10px);
-    transform: translateX(-30px);
+    transform: translateX(-60px);
 }
 
     .birthday-text h1 {
